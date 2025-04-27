@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="usermaster.master.cs" Inherits="userpanel_usermaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+       <link href="../css/bootstrap.min.css" rel="stylesheet" />
+		<link href="../style.css" rel="stylesheet"/>
+		<script src="../js/j query.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+		<script src="../js/popper.min.js"></script>
+        <link href="../style/Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar  fixed-top" style="background-color:midnightblue">
+			<div class="container">
+				<a class="navbar-brand" href="#"></a>
+				<button class="navbar-toggler "  type="button" data-toggle="collapse" data-target="#MainMenu" aria-controls="MainMenu" aria-expanded="false" aria-label="نمایش فهرست">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="MainMenu">
+					<ul class="navbar-nav">
+						<li class="navbar-item active ">
+							<a class="nav-link" href="first.aspx" style="color:azure">صفحه اصلی |</a>
+						</li>
+						<li class="navbar-item">
+							<a class="nav-link" href="../contactus.aspx" style="color:azure">تماس با ما |</a>
+						</li>
+                        <li class="navbar-item">
+							<a class="nav-link" href="../projects.aspx" style="color:azure">پروژه ها |</a>
+						</li>
+                        <li class="navbar-item">
+							<a class="nav-link" href="../maghalat.aspx" style="color:azure">مقالات |</a>
+						</li>
+                         <li class="navbar-item">
+							<a class="nav-link" href="../amuzesha.aspx" style="color:azure">آموزش ها|</a>
+						</li>
+                         <li class="navbar-item">
+							<a class="nav-link" href="../myprofile.aspx" style="color:azure">مشخصات فردی |</a>
+						</li>
+                         <li class="navbar-item">
+							<a class="nav-link" href="../mycomment.aspx" style="color:azure">نظرات من |</a>
+						</li>
+                       <%-- <li class="navbar-item">
+							<a class="nav-link" href="../mydownloads.aspx" style="color:azure">دانلودهای من |</a>
+						</li>--%>
+                         <li class="navbar-item">
+							<a class="nav-link" href="../upload.aspx" style="color:azure">آپلود </a>
+						</li>
+					</ul>
+				</div>
+                <asp:Button ID="exitbtn" class="btn btn-outline-danger" runat="server" Text="خروج" style="margin-left:5px;" OnClick="exitbtn_Click"/>
+               
+			   
+			</div>
+		</nav>
+        <div class="container">
+            <div class="jumbotron " style="margin-top:80px; text-align:right;">
+                
+                    <h3>
+                        <asp:Label ID="welcome" runat="server" Text=""></asp:Label>                  
+                        عزیز به پنل کاربری خوش آمدید  
+                    </h3>
+                    <p >از یادگیری لذت ببرید</p>
+             
+               
+               
+             </div>
+         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                      
+                       <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+                       </asp:ContentPlaceHolder>
+                   
+                </div>
+                <div class="col-md-3">
+            <div class="card ">
+                <h5 class="card-header">جدیدترین مطالب سایت</h5>
+                <div class="card-body ">
+                    <div class="row">
+                        <ul class="list-unstyled ">
+                            <li>
+                                <a href="#" >آموزش ...</a>
+                            </li>
+                            <li>
+                                <a href="#">آموزش ...</a>
+                            </li>
+                            <li>
+                                <a href="#">آموزش ...</a>
+                            </li>
+                            <li>
+                                <a href="#">آموزش ...</a>
+                            </li>
+                            <li>
+                                <a href="#">آموزش ...</a>
+                            </li>
+                            <li>
+                                <a href="#">آموزش ...</a>
+                            </li>
+                            <li>
+                                <a href="#">آموزش ...</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+        
+        
+        <div class="footer  " style="height:200px; padding:20px; margin-top:10px; background-color:midnightblue"> 
+            <div class="container">
+             
+                <p style="color:white; text-align:center;">Designed by ZahraMirzaei</p>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
